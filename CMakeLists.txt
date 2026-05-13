@@ -16,5 +16,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(SFML)
 
 add_executable(Cyber main.cpp die.h
-        die.cpp)
+        die.cpp
+        item.h
+        weapon.h
+        armor.h
+        gear.h)
 target_link_libraries(Cyber sfml-graphics sfml-window sfml-system)
