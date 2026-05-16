@@ -23,5 +23,7 @@ add_executable(Cyber main.cpp die.h
         gear.h
         cyberware.h
         FoundationalCyberware.h
-        Cybereye.h)
+        Cybereye.h
+        Cyberarm.h
+        neuralink.h)
 target_link_libraries(Cyber sfml-graphics sfml-window sfml-system)

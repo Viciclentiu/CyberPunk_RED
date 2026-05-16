@@ -16,6 +16,7 @@ public:
 
     virtual int calculate_humanity_loss()=0;
     virtual int calculate_remaining_slots() = 0;
+    int get_option_slots_used();
     virtual ~FoundationalCyberware();
 
 };
