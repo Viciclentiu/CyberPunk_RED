@@ -13,10 +13,11 @@
 class Character {
     std::string name;
     std::string real_name;
-    Stats stats;
+    unique_ptr<Stats> stats;
+    unique_ptr<Role> role;
     vector<unique_ptr<Skill>> skills;
     vector<unique_ptr<Item>> inventory;
-    vecotr<unique_ptr<Cyberware>> implants;
+    vector<unique_ptr<Cyberware>> implants;
 public:
     Character();
     Character(std::string, std::string, Stats&, vector<unique_ptr<Item>>&,vecotr<unique_ptr<Cyberware>>);
@@ -24,6 +25,9 @@ public:
     int rollinitiative();
     int damage_taken(int attack);
     void skillcheck();
+    void setRole(std::unique_ptr<Role> r) { role = std::move(r); }
+    Role* getRole() const { return role.get(); }
+    void useRoleAbility() { if (role) role->useRoleAbility(*this); }
 
 };
 #endif //CYBER_CHARACTER_H

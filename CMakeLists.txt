@@ -28,5 +28,10 @@ add_executable(Cyber main.cpp die.h
         neuralink.h
         character.h
         stats.h
-        skill.h)
+        skill.h
+        role.h
+        solo.h
+        netrunner.h
+        cyberdeck.h
+        program.h)
 target_link_libraries(Cyber sfml-graphics sfml-window sfml-system)
