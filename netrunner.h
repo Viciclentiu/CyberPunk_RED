@@ -12,7 +12,7 @@ class Netrunner : public Role {
     int neuralInterfaceRank;
 
 public:
-    Netrunner(int rank)
+    Netrunner(int rank);
 
     void useRoleAbility(Character& user) override;
     std::string getRoleAbilityName() const override { return "Interface"; }

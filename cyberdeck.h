@@ -25,24 +25,16 @@ public:
               int totalSlots, int speed, int defense);
 
     virtual ~Cyberdeck();
-
-
     void use() override;
-
-
     bool loadProgram(std::unique_ptr<Program> prog);
     void unloadProgram(const std::string& programName);
     Program* getProgram(const std::string& programName);
-
-
     int getRemainingSlots() const { return totalSlots - usedSlots; }
     int getSpeed() const { return speed; }
     int getDefense() const { return defense; }
     bool isJackedIn() const { return jackedIn; }
     void jackIn()  { jackedIn = true; }
     void jackOut();
-
-
     int rollNetAttack(Program* prog, const Die& die) const;
     int calculateNetDefense() const;
 };

@@ -33,5 +33,9 @@ add_executable(Cyber main.cpp die.h
         solo.h
         netrunner.h
         cyberdeck.h
-        program.h)
+        program.h
+        item.cpp
+        weapon.cpp
+        gear.cpp
+        armor.cpp)
 target_link_libraries(Cyber sfml-graphics sfml-window sfml-system)

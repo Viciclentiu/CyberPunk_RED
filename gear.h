@@ -12,7 +12,7 @@ public:
     Gear();
     Gear(std::string name,int price, int weight, int price_category,std::string desc,int stat);
     virtual ~Gear();
-    void calculate_adv(); // for airhypos
+    virtual int calculate_adv(); // for airhypos
 
 };
 #endif //CYBER_GEAR_H
